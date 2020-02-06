@@ -204,7 +204,7 @@ float3 trace(__constant Sphere* spheres, __constant Light* lights, const Ray* ca
 		ray.origin = hitpoint + normal_facing * EPSILON;
 		ray.dir = normalize(ray.dir - 2 * dot(ray.dir,normal_facing) * normal_facing);
 		accum_specular *= hitsphere.specular;
-		/* if reflection gets too slow, stop */
+		/* if reflection gets too low, stop */
 		if (length(accum_specular) < SPECULAR_THRESHOLD)
 			break;
 	}

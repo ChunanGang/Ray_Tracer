@@ -3,7 +3,7 @@
 #include "geometry.h"
 
 const int light_num = 1;
-const int sphere_matrix_side = 4;
+const int sphere_matrix_side = 2;
 const float sphere_matrix_interrum = 0.7;
 
 const int sphere_num  = sphere_matrix_side*sphere_matrix_side + 1;
