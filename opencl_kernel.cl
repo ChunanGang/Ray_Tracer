@@ -157,7 +157,7 @@ float3 trace(__constant Sphere* spheres, __constant Light* lights, const Ray* ca
 			return accum_color += background_color;
 		/* if ray miss ON REFLECTION, break the loop */
 		else if ( !intersect && i > 0){
-			accum_color += background_color;
+			accum_color += background_color*accum_specular;
 			break;
 		}
 
